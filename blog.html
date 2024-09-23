@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Google font lexend-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        btnBg: '#B4F461',
+                    },
+                    fontFamily: {
+                        Lexend: 'Lexend',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <header class="sticky top-0  backdrop-blur-lg  pb-6 z-10">
+        <div class="navbar z-0  bg-slate-100  backdrop-blur-lg ">
+            <div class="navbar-start">
+                <a id="home-page" class="btn bg-btnBg  border-none lg:text-2xl  extrabold ">Home</a>
+            </div>
+            <div class="navbar-center flex gap-5">
+                <div>
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <div>
+                    <p class="font-semibold text-xl ">Donate Bangladesh</p>
+                </div>
+            </div>
+            <div class="navbar-end flex gap-3
+            ">
+                <div>
+                    <img src="./assets/coin.png" alt="">
+                </div>
+                <div>
+                    <p class="font-bold text-xl"><span>5500</span> BDT</p>
+                </div>
+            </div>
+        </div>
+       
+    </header>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
