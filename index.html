@@ -34,7 +34,7 @@
     <header id="header" class="sticky top-0  backdrop-blur-lg  pb-6 z-10">
         <div class="navbar z-0  bg-slate-100  backdrop-blur-lg ">
             <div class="navbar-start">
-                <a id="blog-page" class="btn bg-btnBg  border-none lg:text-2xl  extrabold ">Blog</a>
+                <a id="blog-page" class="btn bg-btnBg  border-none lg:text-2xl  extrabold " href="./blog.html">Blog</a>
             </div>
             <div class="navbar-center flex gap-5">
                 <div>
@@ -86,13 +86,35 @@
                     will help provide essential supplies and to those affected by this disaster. Every contribution, big
                     or small, makes difference. Please join us in supporting the relief efforts and making a positive
                     impact on the lives of those in need.</p>
-                    <input id="doneted-tk-nuwakhali" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-2" />
+                    <input id="doneted-tk-nuwakhali" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mb-2" />
                     <button id="btn-donate" class="w-full py-3 text-xl   content-center btn bg-btnBg ">Donate now</button>
             </div>
 
         </div>
         <!-- nuwakhali end  -->
+         <!-- feni start  -->
+         <div class="grid grid-cols-1 lg:grid-cols-2  border border-zinc-300 p-7 rounded-lg mt-6 mb-6 ">
+            <div><img src="./assets/feni.png" alt=""></div>
+            <div class="leading-tight">
+                <div class="inline-flex px-5 py-2 content-center-center gap-2 bg-gray-100 rounded-lg "> <img
+                        src="./assets/coin.png" alt="">
+                    <p class="font-semibold text-base">
+                        <!-- given  dona. by people -->
+                        <span id="feni-tk">480</span> BDT
+                    </p>
+                </div>
+                <br>
+                <br>
+                <h4 class="font-bold text-2xl">Donate for Flood Relief in Feni,Bangladesh</h4>
+                <br>
+                
+                <p class="pb-4 leading-7">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                    <input id="doneted-tk-feni" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full mb-2" />
+                    <button id="btn-donate-2" class="w-full py-3 text-xl   content-center btn bg-btnBg ">Donate now</button>
+            </div>
 
+        </div>
+         <!-- feni end  -->
 
         <!-- modal start  -->
         <dialog id="my_modal" class="modal ">
@@ -125,7 +147,7 @@
 
         </div>
     </footer>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" ></script>
 </body>
 
 </html>

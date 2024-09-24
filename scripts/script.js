@@ -32,47 +32,47 @@ function addHistory (cz, location, amount){
 
  
 //  navigate the 2 html file start 
- const blogPage = document.getElementById('blog-page');
- if (blogPage){
-    blogPage.addEventListener('click', function(event){
-        event.preventDefault();
-        window.location.href  ='./blog.html'
+//  const blogPage = document.getElementById('blog-page');
+//  if (blogPage){
+//     blogPage.addEventListener('click', function(event){
+//         event.preventDefault();
+//           window.location.href  ='./blog.html'
          
-    })
- }
- const homePage = document.getElementById('home-page');
- if (homePage){
-    homePage.addEventListener('click', function(event){
-        event.preventDefault();
-        window.location.href  ='./index.html'
-    })
- }
+//     })
+//  }
+//  const homePage = document.getElementById('home-page');
+//  if (homePage){
+//     homePage.addEventListener('click', function(event){
+//         event.preventDefault();
+//         window.location.href  ='./index.html'
+//     })
+//  }
 //  navigate the 2 html file end 
 
 // donate button make manupulate while using add addEventListener  start 
 
-const donateMoney = document.getElementById('btn-donate');
-donateMoney.addEventListener('click', function(){
+const donateMoneyNuwakhali = document.getElementById('btn-donate');
+donateMoneyNuwakhali.addEventListener('click', function(){
     const amountInput =  getElementByIdValue('doneted-tk-nuwakhali');
     
+   const donatedTaka=parseFloat(document.getElementById('nuwakhali-tk').innerText);
+
+   const balance=parseFloat(document.getElementById('main-balance').innerText);
+
     if(amountInput<0 || isNaN(amountInput) || typeof amountInput !== 'number'){
-        return alert('please make sure that you provide a positive number')
+        return alert('make sure that you are providing a valuable input')
         
     }
      if(amountInput){
         modal('my_modal')
      }
-   
-    
-     
-   const nuwakhaliTk=parseFloat(document.getElementById('nuwakhali-tk').innerText);
-   const balance=parseFloat(document.getElementById('main-balance').innerText);
+  
 
    const  currentBalance = balance-amountInput;
    document.getElementById('main-balance').innerText = currentBalance.toFixed(2);
 
-    const nuwakhaliAdding = amountInput + nuwakhaliTk;
-    document.getElementById('nuwakhali-tk').innerText = nuwakhaliAdding.toFixed(2);
+    const amountAfterDonate = amountInput + donatedTaka;
+    document.getElementById('nuwakhali-tk').innerText = amountAfterDonate.toFixed(2);
     document.getElementById('doneted-tk-nuwakhali').value = '';
 
     // add history 
@@ -80,9 +80,39 @@ donateMoney.addEventListener('click', function(){
      
 })
 
+
+
+// feni start 
+const donateMoneyFeni = document.getElementById('btn-donate-2');
+donateMoneyFeni.addEventListener('click', function(){
+    const amountInput =  getElementByIdValue('doneted-tk-feni');
+    
+    if(amountInput<0 || isNaN(amountInput) || typeof amountInput !== 'number' ){
+        return alert('please make sure that you provide a positive number')
+        
+    }
+     if(amountInput){
+        modal('my_modal')
+     }
+  
+   const donatedTaka=parseFloat(document.getElementById('feni-tk').innerText);
+   const balance=parseFloat(document.getElementById('main-balance').innerText);
+
+   const  currentBalance = balance-amountInput;
+   document.getElementById('main-balance').innerText = currentBalance.toFixed(2);
+
+    const amountAfterDonate = amountInput + donatedTaka;
+    document.getElementById('feni-tk').innerText = amountAfterDonate.toFixed(2);
+    document.getElementById('doneted-tk-feni').value = '';
+
+    // add history 
+    addHistory ('flood', 'nowakhali, bangladesh', amountInput)
+     
+})
+// feni and 
 // donate button make manupulate while using add addEventListener  end  
 
-// functionality the button 
+// functionality the button start
         // history btn 
 
 const historyBtn = document.getElementById('history-btn');
@@ -108,5 +138,5 @@ donateBtn.addEventListener('click', function(){
     const historyBtn = document.getElementById('history-btn');
     historyBtn.classList.remove('bg-btnBg');
 })
-
+// functionality the button end
  
