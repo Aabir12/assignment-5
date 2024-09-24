@@ -33,7 +33,7 @@ function addHistory (cz, location, amount){
  if (blogPage){
     blogPage.addEventListener('click', function(event){
         event.preventDefault();
-        window.location.href  ='/blog.html'
+        window.location.href  ='./blog.html'
          
     })
  }
@@ -41,7 +41,7 @@ function addHistory (cz, location, amount){
  if (homePage){
     homePage.addEventListener('click', function(event){
         event.preventDefault();
-        window.location.href  ='/index.html'
+        window.location.href  ='./index.html'
     })
  }
 //  navigate the 2 html file end 
