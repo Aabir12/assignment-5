@@ -31,7 +31,7 @@
 
 <body class="font-Lexend">
     <!-- navbar start  -->
-    <header class="sticky top-0  backdrop-blur-lg  pb-6 z-10">
+    <header id="header" class="sticky top-0  backdrop-blur-lg  pb-6 z-10">
         <div class="navbar z-0  bg-slate-100  backdrop-blur-lg ">
             <div class="navbar-start">
                 <a id="blog-page" class="btn bg-btnBg  border-none lg:text-2xl  extrabold ">Blog</a>
@@ -57,14 +57,14 @@
         <!-- nav end  -->
          <!-- 2 btns center    start  -->
         <div class="flex justify-center mt-16 gap-6">
-            <button class="py-3 text-base content-center btn bg-btnBg duration-200 hover:">Donation</button>
-            <button class="py-3 text-base content-center btn  border">History</button>
+            <button id="donate-btn" class="py-3 text-base content-center btn bg-btnBg">Donation</button>
+            <button id="history-btn" class="py-3 text-base content-center btn  border">History</button>
         </div>
          <!-- 2 btns center    end   -->
     </header>
 
 
-    <main class="px-24 mx-auto">
+    <main id="main" class="px-24 mx-auto">
 
         <!-- nuwakhali flood  -->
         <div class="grid grid-cols-1 lg:grid-cols-2  border border-zinc-300 p-7 rounded-lg">
@@ -117,15 +117,14 @@
         <!-- modal end  -->
 
 
-        <div id="history-tap" class="mt-7 hidden">
-
-        </div>
+        
     </main>
 
+    <footer>
+        <div id="history-tap" class="mt-7 px-24 mx-auto hidden"></div>
 
-    
-  
-
+        </div>
+    </footer>
     <script src="./scripts/script.js"></script>
 </body>
 

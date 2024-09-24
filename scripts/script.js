@@ -1,6 +1,9 @@
 function getElementByIdValue (id){
     return parseFloat(document.getElementById(id).value);
 }
+function getElementById (id){
+    return document.getElementById(id);
+}
 
 function modal (id){
    const modal = document.getElementById(id).showModal();
@@ -77,9 +80,33 @@ donateMoney.addEventListener('click', function(){
      
 })
 
-
-
 // donate button make manupulate while using add addEventListener  end  
 
- 
+// functionality the button 
+        // history btn 
+
+const historyBtn = document.getElementById('history-btn');
+historyBtn.addEventListener('click', function(){
+    const main = getElementById('main');
+    main.classList.add('hidden')
+    const informationData = getElementById('history-tap');
+    informationData.classList.remove('hidden');
+    
+    historyBtn.classList.add('bg-btnBg');
+    const donateBtn = document.getElementById('donate-btn');
+    donateBtn.classList.remove('bg-btnBg');
+})
+// donate btn 
+const donateBtn = document.getElementById('donate-btn');
+donateBtn.addEventListener('click', function(){
+    const main = getElementById('main');
+    main.classList.remove('hidden');
+    const informationData = getElementById('history-tap');
+    informationData.classList.add('hidden');
+    
+    donateBtn.classList.add('bg-btnBg');
+    const historyBtn = document.getElementById('history-btn');
+    historyBtn.classList.remove('bg-btnBg');
+})
+
  
