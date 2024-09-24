@@ -80,7 +80,7 @@ donateMoneyNuwakhali.addEventListener('click', function () {
     document.getElementById('doneted-tk-nuwakhali').value = '';
 
     // add history 
-    addHistory('flood', 'at nowakhali, (bangladesh)', amountInput)
+    addHistory('flood', 'at nowakhali, bangladesh', amountInput)
 
 })
 
